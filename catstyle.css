@@ -1,0 +1,149 @@
+html {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  height: 100%;				/*for any background to be full*/
+  margin: 0;
+}
+
+body {
+	width:100vw;
+	/*height: 100vh;*/
+	height: 100%;
+	display: flex;
+	align-items: center;						/*vertical aligning*/					
+	/*justify-content: center;*/				/*horizontal aligning*/
+	
+	background-size: contain;
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	background-attachment: fixed;
+
+	flex-direction: row;
+	flex-flow: row wrap;
+	/*flex-wrap: wrap;*/
+	/*align-content: space-evenly;*/
+	justify-content: space-evenly;
+	flex-content: space-evenly;
+}
+
+.nav-bar{
+	display: grid;
+	grid-template-rows: 20px;
+	grid-template-columns: 600px;
+	margin: 0% 10%;						
+	height: 45px;
+	font-size: 30px;
+	grid-auto-flow: column;	
+	color: white;
+	border-radius: 10px;
+}
+
+
+.nav-bar button{
+	/*padding:5px;*/
+	border-radius: 10px;
+	background-color: #808080;
+	padding: 10px;
+	width: 600px;
+	color:white;
+}
+
+.nav-bar button:hover{
+	/*border-color: black;
+	color:white;*/
+	background-color: black;
+}
+
+.card{
+	display:grid;
+	grid-template-columns: 300px;						/*defines the horizontal length of grid*/
+	grid-template-rows: 210px 230px 60px;				/*defines the vertical length of grid*/
+	grid-template-areas: "image" "text" "stats";
+	/*height: 100%;*/
+	background-size: contain;
+
+	font-family: roboto;
+	/*border-radius: 18px;*/
+	background: white;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+	text-align: center;
+	margin: 30px;
+
+	transition: 0.5s ease;
+	/*cursor: pointer;*/
+}
+
+.card-image{
+	grid-area: image;
+	background-size: auto;
+	background-repeat: no-repeat;
+	/*height: auto;
+	width: auto;*/
+	/*border-radius: 18px 18px 0px 0px;		
+	can alternatively use 
+	border-top-left-radius:15px;
+	background-top-right-radius:15px;*/
+	/*scroll-behavior: auto;*/
+}
+
+.card-text{
+	grid-area: text;
+	margin:25px;
+}
+
+.card-text .date{
+	color:rgb(255,7,110);
+	font-size: 13px;
+}
+
+.card-text p{
+	color:grey;
+	font-size: 15px;
+	font-weight:300;
+}
+
+.card-text h2{
+	margin-top: 0px;
+	font-size: 28px;
+
+}
+
+.card-stats{
+	grid-area: stats;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;				/*fraction unit*/
+	grid-template-rows: 1fr;
+	/*border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;*/
+	background:rgb(255,7,110);
+}
+
+.card-stats .stat{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;		
+	padding: 10px;
+	color: white;
+}
+
+.card-stats .type{
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.card-stats .value{
+	font-size: 22px;
+	font-weight: 500;
+	padding: 0px;
+}
+
+.card-stats .border{
+	border-left: 1px solid rgb(172,26,87);
+	border-right: 1px solid rgb(172,26,87);
+}
+
+.card-stats .value sup{
+	font-size: 12px;
+}
